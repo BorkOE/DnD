@@ -1,0 +1,41 @@
+TODO:
+
+Utveckla
+    - Context menu, välja verktyg, undernivåer för verktyg. Grafik (cirklar?)
+        - Aktiva verktyg, hierarkier, logik, toogle hide/transparent, hovertext
+    - Savestates, pickla objekt
+    - Grid
+    - Enkel konsoll (meddelanden, ingame, tekniskt, filtrera meddelandetyp)
+    - Measure tool
+
+Fixa
+    - prompt för att stänga battletracker? 
+    - Grafik för död i battletracker
+    - Mouse cursors till marker
+
+Snygga till
+    - Inputbox
+
+Kolla
+    - Windows test
+
+0.3
+- Movement lines and distance label
+- Synced Pings
+
+0.2
+- Instatintiates and syncs multiple enemies of the same type
+- Level select in server gui
+
+0.1
+- Reads map and entities from TMX-file.
+- Syncs entity positions between clients.
+- Server gui
+
+
+** Good to know **
+When the first level is loaded, the players stats are set according to that tmx-file. 
+Later levels loaded that session will only update the positions of players on that level, not other stats such as health etc.
+Newly connected clients won't sync drawing canvas
+
+# Om det krånglar med nätverkslogik: kolla "if data['type'] not in []:" i server. Nu skickar den vidare alla paket till andra klienter. 
